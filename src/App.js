@@ -20,8 +20,8 @@ const BoxTwo = styled.div`
 function App() {
   return (
     <Father>
-      <BoxOne></BoxOne>
-      <BoxTwo></BoxTwo>
+      <BoxOne />
+      <BoxTwo />
     </Father>
   );
 }
