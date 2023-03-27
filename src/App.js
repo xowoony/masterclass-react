@@ -17,10 +17,16 @@ const BoxTwo = styled.div`
   height: 100px;
 `;
 
+const Text = styled.h1`
+  color: white;
+`;
+
 function App() {
   return (
     <Father>
-      <BoxOne />
+      <BoxOne>
+        <Text>Hello</Text>
+      </BoxOne>
       <BoxTwo />
     </Father>
   );
