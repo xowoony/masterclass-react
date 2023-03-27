@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Father = styled.div`  // 백틱
   display: flex;
-`;
+`; 
 
 function App() {
   return (
