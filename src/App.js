@@ -4,21 +4,22 @@ const Father = styled.div`
   display: flex;
 `;
 
-const Box = styled.div`
-  background-color: ${(props) => props.bgColor};
-  width: 100px;
-  height: 100px;
-`;
-
-const Circle = styled(Box)` // Box 컴포넌트에서 border-radius추가
-  border-radius: 3rem;
+const Btn = styled.button`
+  width: 30rem;
+  height: 30rem;
+  margin-right: 1rem;
+  background-color: red;
+  color: white;
 `;
 
 function App() {
   return (
     <Father>
-      <Box bgColor="red" />
-      <Circle bgColor="blue" />
+      <Btn>Login</Btn>
+      <Btn as="a" href="/">
+        Login
+      </Btn>
+      {/*이렇게 작성해주면 됨!*/}
     </Father>
   );
 }
