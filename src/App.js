@@ -4,22 +4,23 @@ const Father = styled.div`
   display: flex;
 `;
 
-const Btn = styled.button`
-  width: 30rem;
-  height: 30rem;
-  margin-right: 1rem;
-  background-color: red;
+// Input 컴포넌트에 모두 required 를 적용하고 싶다면
+// attrs를 이용하면 된다
+//사용법은 다음과 같다
+const Input = styled.input.attrs({ required: true })`
+  background-color: black;
   color: white;
 `;
 
 function App() {
   return (
-    <Father>
-      <Btn>Login</Btn>
-      <Btn as="a" href="/">
-        Login
-      </Btn>
-      {/*이렇게 작성해주면 됨!*/}
+    <Father as="header">
+      <Input />
+      <Input />
+      <Input />
+      <Input />
+      <Input />
+      <Input />
     </Father>
   );
 }
