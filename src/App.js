@@ -21,22 +21,31 @@ const rotationAnimation = keyframes`
     transform:rotate(0deg);
     border-radius: 0px;
     background-color: blueviolet;
-
   }
   `;
 
 // Box
 const Box = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   background-color: salmon;
   height: 200px;
   width: 200px;
   animation: ${rotationAnimation} 10s linear infinite;
+  // target처리
+  span {  
+    font-size: 2rem;
+  }
 `;
 
 function App() {
   return (
     <Wrapper>
-      <Box />
+      <Box>
+        <span>🤣</span>
+      </Box>
     </Wrapper>
   );
 }
