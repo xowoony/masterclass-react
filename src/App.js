@@ -1,27 +1,32 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const Father = styled.div`
+const Wrapper = styled.div`
   display: flex;
 `;
 
-// Input 컴포넌트에 모두 required 를 적용하고 싶다면
-// attrs를 이용하면 된다
-//사용법은 다음과 같다
-const Input = styled.input.attrs({ required: true })`
-  background-color: black;
-  color: white;
+// animation
+const rotationAnimation = keyframes`
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
+`;
+
+// Box
+const Box = styled.div`
+  background-color: salmon;
+  height: 200px;
+  width: 200px;
+  animation: ${rotationAnimation} 1s linear infinite;
 `;
 
 function App() {
   return (
-    <Father as="header">
-      <Input />
-      <Input />
-      <Input />
-      <Input />
-      <Input />
-      <Input />
-    </Father>
+    <Wrapper>
+      <Box />
+    </Wrapper>
   );
 }
 
