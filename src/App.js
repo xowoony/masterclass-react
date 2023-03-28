@@ -18,7 +18,7 @@ function App() {
   return (
     <Father>
       <Box bgColor="red" />
-      <Circle bgColor="blue"></Circle>
+      <Circle bgColor="blue" />
     </Father>
   );
 }
