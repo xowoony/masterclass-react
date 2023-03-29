@@ -1,7 +1,13 @@
 import styled, { keyframes } from "styled-components";
 
 const Wrapper = styled.div`
+  align-items: center;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
 `;
 
 // animation
@@ -24,6 +30,11 @@ const rotationAnimation = keyframes`
   }
   `;
 
+// Emoji
+const Emoji = styled.span`
+font-size: 36px; // 기본값 36px
+`;  
+
 // Box
 const Box = styled.div`
   align-items: center;
@@ -35,7 +46,7 @@ const Box = styled.div`
   width: 200px;
   animation: ${rotationAnimation} 10s linear infinite;
   // target처리
-  span {
+  ${Emoji} {
     font-size: 2rem;
     &:hover {
       font-size: 5rem;
@@ -51,7 +62,7 @@ function App() {
   return (
     <Wrapper>
       <Box>
-        <span>🤣</span>
+        <Emoji>🤣</Emoji>
       </Box>
     </Wrapper>
   );
