@@ -5,7 +5,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   width: 100vw;
   height: 100vh;
 `;
@@ -41,7 +40,7 @@ const Box = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: salmon;
+ 
   height: 200px;
   width: 200px;
   animation: ${rotationAnimation} 10s linear infinite;
@@ -62,8 +61,9 @@ function App() {
   return (
     <Wrapper>
       <Box>
-        <Emoji>🤣</Emoji>
+        <Emoji as="div">🐠</Emoji>
       </Box>
+      <Emoji as="div">🐷</Emoji> {/*얘는 타겟팅에 해당되지 않음*/}
     </Wrapper>
   );
 }
