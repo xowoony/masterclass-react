@@ -45,15 +45,8 @@ const Box = styled.div`
   width: 200px;
   animation: ${rotationAnimation} 10s linear infinite;
   // target처리
-  ${Emoji} {
-    font-size: 2rem;
-    &:hover {
-      font-size: 5rem;
-      background-color: black;
-    }
-    &:active{
-      opacity: 0;
-    }
+  ${Emoji}:hover{
+    font-size: 100px;
   }
 `;
 
