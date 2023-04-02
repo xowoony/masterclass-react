@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 // index.js에서 만들어준 theme textColor에 접근해 볼 수 있다.
 const Title = styled.h1`
   color: ${(props) =>
-    props.theme.textColor}; // props.theme.property이름 이라 작성해주면 된다.
+    props.theme.textColor}; // props.theme.property이름 이라 작성해주면 된다. 
 `;
 
 const Wrapper = styled.div`
